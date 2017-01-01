@@ -93,15 +93,10 @@ namespace WindowsFormsApplication3
 
         private void Form1_Load(object sender, EventArgs e)
         {
+           
             testPanel.Visible = false;
             panel1.Visible = false; 
-            SqlCommand unite_getir = new SqlCommand("Select * from Unite", baglan.baglan());
-            SqlDataReader dr_unite = unite_getir.ExecuteReader();
-            DataTable dtunite = new DataTable();
-            dtunite.Load(dr_unite);
-            comboBox3.DataSource = dtunite;
-            comboBox3.ValueMember = "UniteId";
-            comboBox3.DisplayMember = "UniteIsım";
+           
 
             SqlCommand ders_getir = new SqlCommand("Select * from Dersler", baglan.baglan());
             SqlDataReader dr_ders = ders_getir.ExecuteReader();
@@ -144,8 +139,6 @@ namespace WindowsFormsApplication3
 
                 MessageBox.Show("Bu Bilgilerde Soru yok");
             }
-            
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -166,7 +159,7 @@ namespace WindowsFormsApplication3
             {
                 if (ds.Rows.Count == 0)
                 {
-                    ds = new Connection().GetDb("select top 4 * from Sorular where SinifId='" + comboBox1.SelectedValue + "' and UniteId='" + comboBox3.SelectedValue + "' and DersId='" + comboBox2.SelectedValue + "' ORDER BY NEWID()");
+                    ds = new Connection().GetDb("select top 4 * from Sorular where SinifId='" + comboBox1.SelectedValue + "'and DersId='" + comboBox2.SelectedValue + "' ORDER BY NEWID()");
                     label3.Text = ds.Rows[sayac]["SoruBilgi"].ToString();
                     radioButton1.Text = ds.Rows[sayac]["Secenek1"].ToString();
                     radioButton2.Text = ds.Rows[sayac]["Secenek2"].ToString();
@@ -319,15 +312,7 @@ namespace WindowsFormsApplication3
 
         }
 
-        private void button9_Click_1(object sender, EventArgs e)
-        {
-            dogru_sayisi=0;
-            toplam_soru = 0;
-            ds.Rows.Clear();
-            panel1.Visible = false;
-            girisPanel.Visible = true;
-			cevap = new string[10];
-        }
+       
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -339,6 +324,18 @@ namespace WindowsFormsApplication3
           //e.Cancel = e.CloseReason == CloseReason.UserClosing;
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            dogru_sayisi = 0;
+            toplam_soru = 0;
+            ds.Rows.Clear();
+            panel1.Visible = false;
+            girisPanel.Visible = true;
+            cevap = new string[10];
+        }
+
+
 
     }
 }

@@ -17,3 +17,12 @@ C:\Users\pcc\Documents\Visual Studio 2013\Projects\Yeni klasör\obj\Debug\Window
 C:\Users\pcc\Documents\Visual Studio 2013\Projects\Yeni klasör\obj\Debug\WindowsFormsApplication3.Form1.resources
 C:\Users\pcc\Documents\Visual Studio 2013\Projects\Yeni klasör\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
 C:\Users\pcc\Documents\Visual Studio 2013\Projects\Yeni klasör\obj\Debug\WindowsFormsApplication3.csproj.GenerateResource.Cache
+C:\Users\pcc\Documents\Visual Studio 2013\Projects\AwardQuiz_Client\bin\Debug\WindowsFormsApplication3.exe.config
+C:\Users\pcc\Documents\Visual Studio 2013\Projects\AwardQuiz_Client\obj\Debug\WindowsFormsApplication3.exe
+C:\Users\pcc\Documents\Visual Studio 2013\Projects\AwardQuiz_Client\obj\Debug\WindowsFormsApplication3.pdb
+C:\Users\pcc\Documents\Visual Studio 2013\Projects\AwardQuiz_Client\bin\Debug\WindowsFormsApplication3.exe
+C:\Users\pcc\Documents\Visual Studio 2013\Projects\AwardQuiz_Client\bin\Debug\WindowsFormsApplication3.pdb
+C:\Users\pcc\Documents\Visual Studio 2013\Projects\AwardQuiz_Client\obj\Debug\WindowsFormsApplication3.csprojResolveAssemblyReference.cache
+C:\Users\pcc\Documents\Visual Studio 2013\Projects\AwardQuiz_Client\obj\Debug\WindowsFormsApplication3.Form1.resources
+C:\Users\pcc\Documents\Visual Studio 2013\Projects\AwardQuiz_Client\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
+C:\Users\pcc\Documents\Visual Studio 2013\Projects\AwardQuiz_Client\obj\Debug\WindowsFormsApplication3.csproj.GenerateResource.Cache

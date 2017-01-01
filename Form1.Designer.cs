@@ -29,10 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.girisPanel = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblDogruCevap = new System.Windows.Forms.Label();
+            this.lblToplamSoru = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.testPanel = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -44,35 +51,95 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.girisPanel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.lblDogruCevap = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblToplamSoru = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.testPanel.SuspendLayout();
+            this.ambiance_Label2 = new Ambiance.Ambiance_Label();
+            this.ambiance_Label1 = new Ambiance.Ambiance_Label();
+            this.comboBox2 = new Ambiance.Ambiance_ComboBox();
+            this.comboBox1 = new Ambiance.Ambiance_ComboBox();
+            this.button4 = new EffectualButtonOrange();
+            this.button9 = new EffectualButtonOrange();
+            this.ambiance_Label3 = new Ambiance.Ambiance_Label();
+            this.ambiance_Label4 = new Ambiance.Ambiance_Label();
             this.girisPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.testPanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // girisPanel
+            // 
+            this.girisPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.girisPanel.Controls.Add(this.ambiance_Label2);
+            this.girisPanel.Controls.Add(this.ambiance_Label1);
+            this.girisPanel.Controls.Add(this.comboBox2);
+            this.girisPanel.Controls.Add(this.comboBox1);
+            this.girisPanel.Controls.Add(this.button4);
+            this.girisPanel.Controls.Add(this.button8);
+            this.girisPanel.Controls.Add(this.textBox1);
+            this.girisPanel.Location = new System.Drawing.Point(397, 80);
+            this.girisPanel.Name = "girisPanel";
+            this.girisPanel.Size = new System.Drawing.Size(499, 349);
+            this.girisPanel.TabIndex = 21;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(41, 423);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 12;
+            this.button8.Text = "Admin";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.AllowDrop = true;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.textBox1.Location = new System.Drawing.Point(3, 12);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(350, 66);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.Text = "Bilgisayarı Açmak İçin 10 Sorudan 7 Tanesine Doğru Cevap Vermen Gerekiyor";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.ambiance_Label4);
+            this.panel1.Controls.Add(this.ambiance_Label3);
+            this.panel1.Controls.Add(this.button9);
+            this.panel1.Controls.Add(this.lblDogruCevap);
+            this.panel1.Controls.Add(this.lblToplamSoru);
+            this.panel1.Location = new System.Drawing.Point(596, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(296, 70);
+            this.panel1.TabIndex = 25;
+            // 
+            // lblDogruCevap
+            // 
+            this.lblDogruCevap.AutoSize = true;
+            this.lblDogruCevap.Location = new System.Drawing.Point(121, 38);
+            this.lblDogruCevap.Name = "lblDogruCevap";
+            this.lblDogruCevap.Size = new System.Drawing.Size(0, 13);
+            this.lblDogruCevap.TabIndex = 9;
+            // 
+            // lblToplamSoru
+            // 
+            this.lblToplamSoru.AutoSize = true;
+            this.lblToplamSoru.Location = new System.Drawing.Point(121, 14);
+            this.lblToplamSoru.Name = "lblToplamSoru";
+            this.lblToplamSoru.Size = new System.Drawing.Size(0, 13);
+            this.lblToplamSoru.TabIndex = 7;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // testPanel
             // 
             this.testPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.testPanel.Controls.Add(this.button7);
-            this.testPanel.Controls.Add(this.label9);
             this.testPanel.Controls.Add(this.button6);
+            this.testPanel.Controls.Add(this.label9);
             this.testPanel.Controls.Add(this.button5);
             this.testPanel.Controls.Add(this.button3);
             this.testPanel.Controls.Add(this.button2);
@@ -84,20 +151,30 @@
             this.testPanel.Controls.Add(this.label3);
             this.testPanel.Controls.Add(this.label2);
             this.testPanel.Controls.Add(this.label1);
-            this.testPanel.Location = new System.Drawing.Point(23, 23);
+            this.testPanel.Location = new System.Drawing.Point(19, 12);
             this.testPanel.Name = "testPanel";
-            this.testPanel.Size = new System.Drawing.Size(873, 444);
+            this.testPanel.Size = new System.Drawing.Size(372, 417);
             this.testPanel.TabIndex = 10;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(197, 16);
+            this.button7.Location = new System.Drawing.Point(111, 24);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 24;
             this.button7.Text = "Kilit Aç";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(19, 24);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 23;
+            this.button6.Text = "Kilitle";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label9
             // 
@@ -106,16 +183,6 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 21;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(55, 16);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 23;
-            this.button6.Text = "Kilitle";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -221,212 +288,152 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Soru : ";
             // 
-            // girisPanel
+            // ambiance_Label2
             // 
-            this.girisPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.girisPanel.Controls.Add(this.label4);
-            this.girisPanel.Controls.Add(this.comboBox3);
-            this.girisPanel.Controls.Add(this.button8);
-            this.girisPanel.Controls.Add(this.textBox1);
-            this.girisPanel.Controls.Add(this.label7);
-            this.girisPanel.Controls.Add(this.button4);
-            this.girisPanel.Controls.Add(this.label6);
-            this.girisPanel.Controls.Add(this.label5);
-            this.girisPanel.Controls.Add(this.comboBox2);
-            this.girisPanel.Controls.Add(this.comboBox1);
-            this.girisPanel.Location = new System.Drawing.Point(350, 91);
-            this.girisPanel.Name = "girisPanel";
-            this.girisPanel.Size = new System.Drawing.Size(546, 349);
-            this.girisPanel.TabIndex = 21;
+            this.ambiance_Label2.AutoSize = true;
+            this.ambiance_Label2.BackColor = System.Drawing.Color.Transparent;
+            this.ambiance_Label2.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.ambiance_Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.ambiance_Label2.Location = new System.Drawing.Point(72, 150);
+            this.ambiance_Label2.Name = "ambiance_Label2";
+            this.ambiance_Label2.Size = new System.Drawing.Size(39, 20);
+            this.ambiance_Label2.TabIndex = 21;
+            this.ambiance_Label2.Text = "Ders";
             // 
-            // label4
+            // ambiance_Label1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label4.Location = new System.Drawing.Point(74, 151);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 18);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Ders";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(126, 204);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 13;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(41, 423);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 12;
-            this.button8.Text = "Admin";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.AllowDrop = true;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBox1.Location = new System.Drawing.Point(3, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(350, 66);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "Bilgisayarı Açmak İçin 10 Sorudan 7 Tanesine Doğru Cevap Vermen Gerekiyor";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(155, 257);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "label7";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(143, 292);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Başlat";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label6.Location = new System.Drawing.Point(72, 207);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 18);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Ünite";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label5.Location = new System.Drawing.Point(74, 93);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 18);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Sınıf";
+            this.ambiance_Label1.AutoSize = true;
+            this.ambiance_Label1.BackColor = System.Drawing.Color.Transparent;
+            this.ambiance_Label1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.ambiance_Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.ambiance_Label1.Location = new System.Drawing.Point(73, 94);
+            this.ambiance_Label1.Name = "ambiance_Label1";
+            this.ambiance_Label1.Size = new System.Drawing.Size(38, 20);
+            this.ambiance_Label1.TabIndex = 20;
+            this.ambiance_Label1.Text = "Sınıf";
             // 
             // comboBox2
             // 
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.comboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox2.DropDownHeight = 100;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(126, 152);
+            this.comboBox2.HoverSelectionColor = System.Drawing.Color.Empty;
+            this.comboBox2.IntegralHeight = false;
+            this.comboBox2.ItemHeight = 20;
+            this.comboBox2.Location = new System.Drawing.Point(126, 149);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 1;
+            this.comboBox2.Size = new System.Drawing.Size(242, 26);
+            this.comboBox2.StartIndex = 0;
+            this.comboBox2.TabIndex = 19;
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox1.DropDownHeight = 100;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.comboBox1.Location = new System.Drawing.Point(126, 94);
+            this.comboBox1.HoverSelectionColor = System.Drawing.Color.Empty;
+            this.comboBox1.IntegralHeight = false;
+            this.comboBox1.ItemHeight = 20;
+            this.comboBox1.Location = new System.Drawing.Point(126, 93);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.comboBox1.Size = new System.Drawing.Size(242, 26);
+            this.comboBox1.StartIndex = 0;
+            this.comboBox1.TabIndex = 18;
             // 
-            // panel1
+            // button4
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.lblDogruCevap);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.lblToplamSoru);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Location = new System.Drawing.Point(596, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 70);
-            this.panel1.TabIndex = 25;
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
+            this.button4.Location = new System.Drawing.Point(170, 203);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(149, 52);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "Başlat";
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(131, 10);
+            this.button9.BackColor = System.Drawing.Color.Transparent;
+            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
+            this.button9.Location = new System.Drawing.Point(195, 14);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 16;
+            this.button9.Size = new System.Drawing.Size(96, 33);
+            this.button9.TabIndex = 18;
             this.button9.Text = "Tekrar Et";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click_1);
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // lblDogruCevap
+            // ambiance_Label3
             // 
-            this.lblDogruCevap.AutoSize = true;
-            this.lblDogruCevap.Location = new System.Drawing.Point(85, 44);
-            this.lblDogruCevap.Name = "lblDogruCevap";
-            this.lblDogruCevap.Size = new System.Drawing.Size(0, 13);
-            this.lblDogruCevap.TabIndex = 9;
+            this.ambiance_Label3.AutoSize = true;
+            this.ambiance_Label3.BackColor = System.Drawing.Color.Transparent;
+            this.ambiance_Label3.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.ambiance_Label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.ambiance_Label3.Location = new System.Drawing.Point(11, 9);
+            this.ambiance_Label3.Name = "ambiance_Label3";
+            this.ambiance_Label3.Size = new System.Drawing.Size(104, 20);
+            this.ambiance_Label3.TabIndex = 21;
+            this.ambiance_Label3.Text = "Toplam Soru : ";
             // 
-            // label11
+            // ambiance_Label4
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 44);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 13);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Doğru Cevap";
-            // 
-            // lblToplamSoru
-            // 
-            this.lblToplamSoru.AutoSize = true;
-            this.lblToplamSoru.Location = new System.Drawing.Point(85, 20);
-            this.lblToplamSoru.Name = "lblToplamSoru";
-            this.lblToplamSoru.Size = new System.Drawing.Size(0, 13);
-            this.lblToplamSoru.TabIndex = 7;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(5, 20);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 13);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "Toplam Soru : ";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.ambiance_Label4.AutoSize = true;
+            this.ambiance_Label4.BackColor = System.Drawing.Color.Transparent;
+            this.ambiance_Label4.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.ambiance_Label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.ambiance_Label4.Location = new System.Drawing.Point(11, 33);
+            this.ambiance_Label4.Name = "ambiance_Label4";
+            this.ambiance_Label4.Size = new System.Drawing.Size(107, 20);
+            this.ambiance_Label4.TabIndex = 22;
+            this.ambiance_Label4.Text = "Doğru Cevap : ";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(908, 529);
+            this.Controls.Add(this.testPanel);
             this.Controls.Add(this.girisPanel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.testPanel);
             this.KeyPreview = true;
             this.Name = "Form1";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Form1";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.testPanel.ResumeLayout(false);
-            this.testPanel.PerformLayout();
             this.girisPanel.ResumeLayout(false);
             this.girisPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.testPanel.ResumeLayout(false);
+            this.testPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel girisPanel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblDogruCevap;
+        private System.Windows.Forms.Label lblToplamSoru;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel testPanel;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -437,28 +444,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel girisPanel;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblDogruCevap;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label lblToplamSoru;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Timer timer1;
+        private EffectualButtonOrange button4;
+        private Ambiance.Ambiance_ComboBox comboBox1;
+        private Ambiance.Ambiance_ComboBox comboBox2;
+        private Ambiance.Ambiance_Label ambiance_Label2;
+        private Ambiance.Ambiance_Label ambiance_Label1;
+        private EffectualButtonOrange button9;
+        private Ambiance.Ambiance_Label ambiance_Label4;
+        private Ambiance.Ambiance_Label ambiance_Label3;
 
 
     }

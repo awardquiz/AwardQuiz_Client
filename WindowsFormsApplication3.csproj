@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ambiance Theme.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BLL\Connection.cs" />
     <Compile Include="DAL\Connection.cs" />
     <Compile Include="esqlbaglantisi.cs" />

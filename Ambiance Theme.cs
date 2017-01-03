@@ -3397,7 +3397,7 @@ class Ambiance_RichTextBox : Control
 
         AddRichTextBox();
         Controls.Add(AmbianceRTB);
-        BackColor = Color.Transparent;
+        BackColor = Color.White;
         ForeColor = Color.FromArgb(76, 76, 76);
 
         P1 = new Pen(Color.FromArgb(180, 180, 180));
